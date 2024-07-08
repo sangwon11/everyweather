@@ -1,6 +1,8 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import WeatherBox from './component/WeatherBox';
+import WeatherButton from './component/WeatherButton';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // 1. 홈 화면에 현재위치 날씨
 // 2. 날씨정보가 뜨는 컴포넌트
@@ -9,6 +11,9 @@ import WeatherBox from './component/WeatherBox';
 // 5. 배포
 
 function App() {
+
+  const [weather, setWeather] = useState(null);
+
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position)=>{
       let lat = position.coords.latitude
@@ -18,10 +23,10 @@ function App() {
   }
 
   const getWeatherByCurrentLocation = async(lat,lon) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=74a971a9bfd6d01630ffc4aa5616f71d`
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=74a971a9bfd6d01630ffc4aa5616f71d&units=metric`
     let response = await fetch(url);
     let data = await response.json();
-    console.log("data",data);
+    setWeather(data);
   }
 
   useEffect(()=>{
@@ -29,7 +34,10 @@ function App() {
   },[])
   return (
     <div>
-      <WeatherBox />
+      <div className='container'>
+        <WeatherBox weather={weather} />
+        <WeatherButton />
+      </div>
     </div>
   );
 }
