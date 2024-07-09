@@ -15,6 +15,7 @@ function App() {
 
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState("");
+  const [loading, setLoading] = useState(false);
   const cities = ["seoul", "incheon", "busan", "daegu", "daejeon", "ulsan", "gwangju"];
 
   const getCurrentLocation = () => {
@@ -27,16 +28,20 @@ function App() {
 
   const getWeatherByCurrentLocation = async(lat,lon) => {
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=74a971a9bfd6d01630ffc4aa5616f71d&units=metric`
+    setLoading(true)
     let response = await fetch(url);
     let data = await response.json();
     setWeather(data);
+    setLoading(false)
   }
 
   const getWeatherByCity = async() => {
     let url =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=74a971a9bfd6d01630ffc4aa5616f71d&units=metric`
+    setLoading(true)
     let response = await fetch(url);
     let data = await response.json();
     setWeather(data);
+    setLoading(false)
   }
 
   useEffect(()=>{
@@ -49,10 +54,16 @@ function App() {
 
   return (
     <div>
-      <div className='container'>
-        <WeatherBox weather={weather} />
-        <WeatherButton cities={cities} setCity={setCity}/>
-      </div>
+      {loading ? ( 
+        <div className='container'>
+          <ClipLoader color="#f88c6b" loading={loading} size={150} /> 
+        </div>
+      ) : (
+        <div className='container'>
+            <WeatherBox weather={weather} />
+            <WeatherButton cities={cities} setCity={setCity} />
+        </div>)}
+      
     </div>
   );
 }
