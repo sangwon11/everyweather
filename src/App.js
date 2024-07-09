@@ -13,6 +13,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   const [weather, setWeather] = useState(null);
+  const [city, setCity] = useState("");
+  const cities = ["seoul", "incheon", "busan", "daegu", "daejeon", "ulsan", "gwangju"];
 
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position)=>{
@@ -29,14 +31,26 @@ function App() {
     setWeather(data);
   }
 
+  const getWeatherByCity = async() => {
+    let url =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=74a971a9bfd6d01630ffc4aa5616f71d&units=metric`
+    let response = await fetch(url);
+    let data = await response.json();
+    setWeather(data);
+  }
+
   useEffect(()=>{
-    getCurrentLocation()
-  },[])
+    if (city=="") {
+      getCurrentLocation()
+    } else {
+      getWeatherByCity()
+    }
+  },[city])
+
   return (
     <div>
       <div className='container'>
         <WeatherBox weather={weather} />
-        <WeatherButton />
+        <WeatherButton cities={cities} setCity={setCity}/>
       </div>
     </div>
   );
