@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import WeatherBox from './component/WeatherBox';
 import WeatherButton from './component/WeatherButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ClipLoader from "react-spinners/ClipLoader";
 
 // 1. 홈 화면에 현재위치 날씨
 // 2. 날씨정보가 뜨는 컴포넌트
