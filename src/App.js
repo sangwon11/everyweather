@@ -19,7 +19,7 @@ function App() {
 
   const cities = ["seoul", "incheon", "busan", "daegu", "daejeon", "ulsan", "gwangju",
     "andong", "suwon", "changwon", "jeonju", "gyeongju", "cheongju", "gangneung",
-    "sangju", "yeosu"];
+    "sangju", "yeosu", "gumi"];
 
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position)=>{
