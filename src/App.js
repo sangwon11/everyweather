@@ -16,7 +16,9 @@ function App() {
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
-  const cities = ["seoul", "incheon", "busan", "daegu", "daejeon", "ulsan", "gwangju"];
+  
+  const cities = ["seoul", "incheon", "busan", "daegu", "daejeon", "ulsan", "gwangju",
+    "andong", "suwon", "changwon", "jeonju", "gyeongju", "cheongju", "gangneung"];
 
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position)=>{
