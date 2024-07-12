@@ -5,6 +5,7 @@ const WeatherButton = ({cities, setCity}) => {
   console.log("cities",cities)
   return (
     <div>
+      
       <Button 
         variant="warning" 
         onClick={() => setCity("")}>
