@@ -17,6 +17,7 @@ function App() {
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
+  const [backgroundImage, setBackgroundImage] = useState('url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5fGVufDB8fDB8fHww)')
 
   const cities = ["seoul", "incheon", "busan", "daegu", "daejeon", "ulsan", "gwangju",
     "andong", "suwon", "changwon", "jeonju", "gyeongju", "cheongju", "gangneung",
@@ -56,8 +57,43 @@ function App() {
     }
   },[city])
 
+  useEffect(()=>{
+    if (weather?.weather[0].main == 'Rain') {
+      setBackgroundImage('url(https://images.unsplash.com/photo-1437624155766-b64bf17eb2ce?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+    } else if (weather?.weather[0].main == 'Clouds') {
+      setBackgroundImage('url(https://images.unsplash.com/photo-1504253163759-c23fccaebb55?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+    } else if (weather?.weather[0].main == 'Drizzle') {
+      setBackgroundImage('url(https://images.unsplash.com/photo-1508873760731-9c3d0bb6b961?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+    } else if (weather?.weather[0].main == 'Thunderstorm') {
+      setBackgroundImage('url()')
+    } else if (weather?.weather[0].main == 'Snow') {
+      setBackgroundImage('url()')
+    } else if (weather?.weather[0].main == 'Mist') {
+      setBackgroundImage('url()')
+    } else if (weather?.weather[0].main == 'smoke') {
+      setBackgroundImage('url()')
+    } else if (weather?.weather[0].main == 'Haze') {
+      setBackgroundImage('url()')
+    } else if (weather?.weather[0].main == 'Dust') {
+      setBackgroundImage('url()')
+    } else if (weather?.weather[0].main == 'Fog') {
+      setBackgroundImage('url()')
+    } else if (weather?.weather[0].main == 'sand') {
+      setBackgroundImage('url()')
+    } else if (weather?.weather[0].main == 'Ash') {
+      setBackgroundImage('url()')
+    } else if (weather?.weather[0].main == 'squall') {
+      setBackgroundImage('url()')
+    } else if (weather?.weather[0].main == 'Tonado') {
+      setBackgroundImage('url()')
+    }
+    else {
+      setBackgroundImage('url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5fGVufDB8fDB8fHww)')
+    }
+  })
+
   return (
-    <div>
+    <div className='background' style={{backgroundImage}}>
 
       {loading ? ( 
         <div className='container'>
