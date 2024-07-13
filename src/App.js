@@ -77,9 +77,9 @@ function App() {
     } else if (weather?.weather[0].main == 'Dust') {
       setBackgroundImage('url(https://images.unsplash.com/photo-1603695820889-f8a0a86b8712?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
     } else if (weather?.weather[0].main == 'Fog') {
-      setBackgroundImage('url()')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1444837881208-4d46d5c1f127?q=80&w=2845&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
     } else if (weather?.weather[0].main == 'sand') {
-      setBackgroundImage('url()')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1603731896431-2b3439e9f092?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
     } else if (weather?.weather[0].main == 'Ash') {
       setBackgroundImage('url()')
     } else if (weather?.weather[0].main == 'squall') {
