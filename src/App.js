@@ -67,7 +67,7 @@ function App() {
     } else if (weather?.weather[0].main == 'Thunderstorm') {
       setBackgroundImage('url(https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
     } else if (weather?.weather[0].main == 'Snow') {
-      setBackgroundImage('url()')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1511131341194-24e2eeeebb09?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
     } else if (weather?.weather[0].main == 'Mist') {
       setBackgroundImage('url()')
     } else if (weather?.weather[0].main == 'smoke') {
