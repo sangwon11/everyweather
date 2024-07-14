@@ -5,7 +5,7 @@
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   height: 100vh;
@@ -16,4 +16,5 @@
   padding: 50px;
   border-radius: 30px;
   background-color: azure;
+  box-shadow: 0 0 300px -80px;
 }
