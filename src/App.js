@@ -18,7 +18,12 @@ function App() {
   const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
   const [backgroundImage, setBackgroundImage] = useState('url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5fGVufDB8fDB8fHww)')
-  const cities = ["seoul", "incheon", "busan", "daegu", "daejeon", "ulsan", "gwangju"];
+  const cities = ["seoul", "incheon", "busan", "daegu", "daejeon", "ulsan", "gwangju", "jeju"]
+  const Gyeonggi = ["Suwon", "Seongnam", "Anyang", "Bucheon", "Ansan", "Goyang", "Gwacheon","Guri", "Namyangju", "Osan", "Gunpo", "Uiwang", "Hanam", "Yongin", "Paju", "Anseong", "Hwaseong", "Yangju", "Yeoju"]
+  const Chungcheong = ["Cheongju", "Chungju", "Jecheon", "Cheonan", "Gongju", "Boryeong", "Asan", "Seosan", "Nonsan"]
+  const Gyeongsang = ["Pohang", "Gyeongju", "Gimcheon", "Andong", "Gumi", "Yeongju", "Sangju", "Mungyeong", "Gyeongsan", "Changwon", "Jinju", "Sacheon", "Gimhae", "Miryang", "Yangsan"]
+  const Jeolla = ["Mokpo", "Yeosu", "Suncheon", "Naju", "Gwangyang", "Jeonju", "Gunsan", "Iksan", "Namwon", "Gimje"]
+  const Gangwon = ["Chuncheon", "Wonju", "Gangneung", "Taebaek", "Sokcho", "Samcheok"]
 
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position)=>{
@@ -100,6 +105,11 @@ function App() {
         <div className='container'>
             <WeatherBox weather={weather} />
             <WeatherButton cities={cities} setCity={setCity} />
+            <WeatherButton cities={Gyeonggi} setCity={setCity} />
+            <WeatherButton cities={Chungcheong} setCity={setCity}/>
+            <WeatherButton cities={Gyeongsang} setCity={setCity}/>
+            <WeatherButton cities={Jeolla} setCity={setCity}/>
+            <WeatherButton cities={Gangwon} setCity={setCity}/>
         </div>)}
       
     </div>
