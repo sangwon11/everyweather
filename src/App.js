@@ -23,6 +23,7 @@ function App() {
   const Chungcheong = ["Cheongju", "Chungju", "Jecheon", "Cheonan", "Gongju", "Boryeong", "Asan", "Seosan", "Nonsan"]
   const Gyeongsang = ["Pohang", "Gyeongju", "Gimcheon", "Andong", "Gumi", "Yeongju", "Sangju", "Mungyeong", "Gyeongsan", "Changwon", "Jinju", "Sacheon", "Gimhae", "Miryang", "Yangsan"]
   const Jeolla = ["Mokpo", "Yeosu", "Suncheon", "Naju", "Gwangyang", "Jeonju", "Gunsan", "Iksan", "Namwon", "Gimje"]
+  
   const Gangwon = ["Chuncheon", "Wonju", "Gangneung", "Taebaek", "Sokcho", "Samcheok"]
 
   const getCurrentLocation = () => {
