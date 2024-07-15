@@ -18,7 +18,6 @@ function App() {
   const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
   const [backgroundImage, setBackgroundImage] = useState('url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5fGVufDB8fDB8fHww)')
-
   const cities = ["seoul", "incheon", "busan", "daegu", "daejeon", "ulsan", "gwangju"];
 
   const getCurrentLocation = () => {
