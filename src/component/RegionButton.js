@@ -1,17 +1,10 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
-const WeatherButton = ({cities, selectedCity, setCity}) => {
+const RegionButton = ({cities, selectedCity, setCity}) => {
   console.log("cities",cities)
   return (
     <div>
-      
-      <Button 
-        variant={`${selectedCity == null ? "outline-warning" : "warning"}`}
-        onClick={() => setCity("")}>
-          현재위치
-      </Button>
-
       {cities.map((item, index) => (
         <Button 
           variant={`${selectedCity == null ? "outline-warning" : "warning"}`}
@@ -25,4 +18,4 @@ const WeatherButton = ({cities, selectedCity, setCity}) => {
   )
 }
 
-export default WeatherButton;
+export default RegionButton;

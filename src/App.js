@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import WeatherBox from './component/WeatherBox';
 import WeatherButton from './component/WeatherButton';
+import RegionButton from './component/RegionButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ClipLoader from "react-spinners/ClipLoader";
 
@@ -103,13 +104,13 @@ function App() {
         </div>
       ) : (
         <div className='container'>
-            <WeatherBox weather={weather} />
+            <WeatherBox weather={weather} cities={cities} setCity={setCity}/>
             <WeatherButton cities={cities} setCity={setCity} />
-            <WeatherButton cities={Gyeonggi} setCity={setCity} />
-            <WeatherButton cities={Chungcheong} setCity={setCity}/>
-            <WeatherButton cities={Gyeongsang} setCity={setCity}/>
-            <WeatherButton cities={Jeolla} setCity={setCity}/>
-            <WeatherButton cities={Gangwon} setCity={setCity}/>
+            <RegionButton cities={Gyeonggi} setCity={setCity} />
+            <RegionButton cities={Chungcheong} setCity={setCity}/>
+            <RegionButton cities={Gyeongsang} setCity={setCity}/>
+            <RegionButton cities={Jeolla} setCity={setCity}/>
+            <RegionButton cities={Gangwon} setCity={setCity}/>
         </div>)}
       
     </div>
