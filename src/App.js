@@ -5,6 +5,9 @@ import WeatherButton from './component/WeatherButton';
 import RegionButton from './component/RegionButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ClipLoader from "react-spinners/ClipLoader";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCloud, faCloudBolt, faCloudRain, faDroplet, faSmog, faTornado, faVolcano, faWind } from '@fortawesome/free-solid-svg-icons';
+import { faSnowflake, faSun } from '@fortawesome/free-regular-svg-icons';
 
 // 1. 홈 화면에 현재위치 날씨
 // 2. 날씨정보가 뜨는 컴포넌트
@@ -19,6 +22,8 @@ function App() {
   const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
   const [backgroundImage, setBackgroundImage] = useState('url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5fGVufDB8fDB8fHww)')
+  const [icon, setIcon] = useState("")
+
   const cities = ["seoul", "incheon", "busan", "daegu", "daejeon", "ulsan", "gwangju", "jeju"]
   const Gyeonggi = ["Suwon", "Seongnam", "Anyang", "Bucheon", "Ansan", "Goyang", "Gwacheon","Guri", "Namyangju", "Osan", "Gunpo", "Uiwang", "Hanam", "Yongin", "Paju", "Anseong", "Hwaseong", "Yangju", "Yeoju"]
   const Chungcheong = ["Cheongju", "Chungju", "Jecheon", "Cheonan", "Gongju", "Boryeong", "Asan", "Seosan", "Nonsan"]
@@ -62,36 +67,51 @@ function App() {
 
   useEffect(()=>{
     if (weather?.weather[0].main == 'Rain') {
-      setBackgroundImage('url(https://images.unsplash.com/photo-1437624155766-b64bf17eb2ce?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1437624155766-b64bf17eb2ce?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faCloudRain} />)
     } else if (weather?.weather[0].main == 'Clouds') {
-      setBackgroundImage('url(https://images.unsplash.com/photo-1504253163759-c23fccaebb55?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1504253163759-c23fccaebb55?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faCloud} />)
     } else if (weather?.weather[0].main == 'Drizzle') {
-      setBackgroundImage('url(https://images.unsplash.com/photo-1508873760731-9c3d0bb6b961?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1508873760731-9c3d0bb6b961?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faDroplet} />)
     } else if (weather?.weather[0].main == 'Thunderstorm') {
-      setBackgroundImage('url(https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faCloudBolt} />)
     } else if (weather?.weather[0].main == 'Snow') {
-      setBackgroundImage('url(https://images.unsplash.com/photo-1511131341194-24e2eeeebb09?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1511131341194-24e2eeeebb09?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faSnowflake} />)
     } else if (weather?.weather[0].main == 'Mist') {
-      setBackgroundImage('url(https://images.unsplash.com/photo-1603794052293-650dbdeef72c?q=80&w=2912&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1603794052293-650dbdeef72c?q=80&w=2912&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faSmog} />)
     } else if (weather?.weather[0].main == 'smoke') {
-      setBackgroundImage('url(https://images.unsplash.com/photo-1626535683369-0edf8fb3bd58?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1626535683369-0edf8fb3bd58?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faSmog} />)
     } else if (weather?.weather[0].main == 'Haze') {
-      setBackgroundImage('url(https://plus.unsplash.com/premium_photo-1666211586138-d40960820390?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://plus.unsplash.com/premium_photo-1666211586138-d40960820390?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faSmog} />)
     } else if (weather?.weather[0].main == 'Dust') {
-      setBackgroundImage('url(https://images.unsplash.com/photo-1603695820889-f8a0a86b8712?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1603695820889-f8a0a86b8712?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faSmog} />)
     } else if (weather?.weather[0].main == 'Fog') {
-      setBackgroundImage('url(https://images.unsplash.com/photo-1444837881208-4d46d5c1f127?q=80&w=2845&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1444837881208-4d46d5c1f127?q=80&w=2845&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faSmog} />)
     } else if (weather?.weather[0].main == 'sand') {
-      setBackgroundImage('url(https://images.unsplash.com/photo-1603731896431-2b3439e9f092?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1603731896431-2b3439e9f092?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faSmog} />)
     } else if (weather?.weather[0].main == 'Ash') {
-      setBackgroundImage('url(https://images.unsplash.com/photo-1569875770758-f17664dfe4f8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1569875770758-f17664dfe4f8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faVolcano} />)
     } else if (weather?.weather[0].main == 'squall') {
-      setBackgroundImage('url(https://images.unsplash.com/photo-1505672678657-cc7037095e60?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1505672678657-cc7037095e60?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faWind} />)
     } else if (weather?.weather[0].main == 'Tonado') {
-      setBackgroundImage('url(https://plus.unsplash.com/premium_photo-1664303499312-917c50e4047b?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+      setBackgroundImage('url(https://plus.unsplash.com/premium_photo-1664303499312-917c50e4047b?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)');
+      setIcon(<FontAwesomeIcon icon={faTornado} />)
     }
     else {
-      setBackgroundImage('url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5fGVufDB8fDB8fHww)')
+      setBackgroundImage('url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5fGVufDB8fDB8fHww)');
+      setIcon(<FontAwesomeIcon icon={faSun} />)
     }
   })
 
@@ -104,7 +124,7 @@ function App() {
         </div>
       ) : (
         <div className='container'>
-            <WeatherBox weather={weather} cities={cities} setCity={setCity}/>
+            <WeatherBox weather={weather} icon={icon}/>
             <WeatherButton cities={cities} setCity={setCity} />
             <RegionButton cities={Gyeonggi} setCity={setCity} />
             <RegionButton cities={Chungcheong} setCity={setCity}/>
