@@ -9,12 +9,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloud, faCloudBolt, faCloudRain, faDroplet, faSmog, faTornado, faVolcano, faWind } from '@fortawesome/free-solid-svg-icons';
 import { faSnowflake, faSun } from '@fortawesome/free-regular-svg-icons';
 
-// 1. 홈 화면에 현재위치 날씨
-// 2. 날씨정보가 뜨는 컴포넌트
-// 3. 전국지역 버튼을 생성, 누르면 해당 지역 날씨가 나옴
-// 4. 나머지는 css ui,반응형 기능
-// 5. 배포
-
 
 function App() {
 
