@@ -102,6 +102,7 @@ function App() {
             <RegionButton cities={Jeolla} setCity={setCity}/>
             <RegionButton cities={Gangwon} setCity={setCity}/>
         </div>)}
+        
     </div>
   );
 }
