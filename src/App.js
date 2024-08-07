@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import WeatherBox from './component/WeatherBox';
 import WeatherButton from './component/WeatherButton';
 import RegionButton from './component/RegionButton';
+import SearchBar from './component/SearchBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ClipLoader from "react-spinners/ClipLoader";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,8 +16,8 @@ function App() {
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
-  const [backgroundImage, setBackgroundImage] = useState('url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5fGVufDB8fDB8fHww)')
-  const [icon, setIcon] = useState("")
+  const [backgroundImage, setBackgroundImage] = useState('url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5fGVufDB8fDB8fHww)');
+  const [icon, setIcon] = useState("");
 
   const cities = ["seoul", "incheon", "busan", "daegu", "daejeon", "ulsan", "gwangju", "jeju"]
   const Gyeonggi = ["Suwon", "Seongnam", "Anyang", "Bucheon", "Ansan", "Goyang", "Gwacheon","Guri", "Namyangju", "Osan", "Gunpo", "Uiwang", "Hanam", "Yongin", "Paju", "Anseong", "Hwaseong", "Yangju", "Yeoju"]
@@ -92,7 +93,6 @@ function App() {
     }
   };
 
-
   return (
     <div className='background' style={{backgroundImage}}>
 
@@ -102,6 +102,7 @@ function App() {
         </div>
       ) : (
         <div className='container'>
+          <SearchBar setCity={setCity} /> 
             <WeatherBox weather={weather} icon={icon}/>
             <WeatherButton cities={cities} setCity={setCity} handleCityChange={handleCityChange} />
             <RegionButton cities={Gyeonggi} setCity={setCity} />
