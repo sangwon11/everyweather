@@ -85,14 +85,6 @@ function App() {
     }
   }, [weather]);
 
-  const handleCityChange = (city) => {
-    if (city === "current") {
-      setCity("");
-    } else {
-      setCity(city);
-    }
-  };
-
   return (
     <div className='background' style={{backgroundImage}}>
 
@@ -104,7 +96,7 @@ function App() {
         <div className='container'>
           <SearchBar className='search-bar' setCity={setCity} /> 
             <WeatherBox weather={weather} icon={icon}/>
-            <WeatherButton cities={cities} setCity={setCity} handleCityChange={handleCityChange} />
+            <WeatherButton cities={cities} setCity={setCity} />
             <RegionButton cities={Gyeonggi} setCity={setCity} />
             <RegionButton cities={Chungcheong} setCity={setCity}/>
             <RegionButton cities={Gyeongsang} setCity={setCity}/>
