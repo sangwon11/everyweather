@@ -1,4 +1,6 @@
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SearchBar = ({ setCity }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -11,11 +13,11 @@ const SearchBar = ({ setCity }) => {
     <div className='search-bar'>
       <input 
         type='text' 
-        placeholder='도시 입력(영어로)' 
+        placeholder='Search(english)' 
         value={searchQuery} 
         onChange={(e) => setSearchQuery(e.target.value)} 
       />
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
     </div>
   );
 }

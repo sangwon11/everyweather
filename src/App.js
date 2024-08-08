@@ -94,8 +94,7 @@ function App() {
         </div>
       ) : (
         <div className='container'>
-          <SearchBar className='search-bar' setCity={setCity} /> 
-            <WeatherBox weather={weather} icon={icon}/>
+            <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
             <WeatherButton cities={cities} setCity={setCity} />
             <RegionButton cities={Gyeonggi} setCity={setCity} />
             <RegionButton cities={Chungcheong} setCity={setCity}/>
