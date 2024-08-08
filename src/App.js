@@ -2,7 +2,6 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import WeatherBox from './component/WeatherBox';
 import WeatherButton from './component/WeatherButton';
-import RegionButton from './component/RegionButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ClipLoader from "react-spinners/ClipLoader";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,11 +18,6 @@ function App() {
   const [icon, setIcon] = useState("");
 
   const cities = ["seoul", "new york", "tokyo", "Berlin", "London", "paris", "Moscow", "Beijing"]
-  const Gyeonggi = ["Suwon", "Seongnam", "Anyang", "Bucheon", "Ansan", "Goyang", "Gwacheon","Guri", "Namyangju", "Osan", "Gunpo", "Uiwang", "Hanam", "Yongin", "Paju", "Anseong", "Hwaseong", "Yangju", "Yeoju"]
-  const Chungcheong = ["Cheongju", "Chungju", "Jecheon", "Cheonan", "Gongju", "Boryeong", "Asan", "Seosan", "Nonsan"]
-  const Gyeongsang = ["Pohang", "Gyeongju", "Gimcheon", "Andong", "Gumi", "Yeongju", "Sangju", "Mungyeong", "Gyeongsan", "Changwon", "Jinju", "Sacheon", "Gimhae", "Miryang", "Yangsan"]
-  const Jeolla = ["Mokpo", "Yeosu", "Suncheon", "Naju", "Gwangyang", "Jeonju", "Gunsan", "Iksan", "Namwon", "Gimje"]
-  const Gangwon = ["Chuncheon", "Wonju", "Gangneung", "Taebaek", "Sokcho", "Samcheok"]
 
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position)=>{
@@ -104,11 +98,6 @@ function App() {
         <div className='container'>
             <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
             <WeatherButton cities={cities} setCity={setCity} />
-            <RegionButton cities={Gyeonggi} setCity={setCity} />
-            <RegionButton cities={Chungcheong} setCity={setCity}/>
-            <RegionButton cities={Gyeongsang} setCity={setCity}/>
-            <RegionButton cities={Jeolla} setCity={setCity}/>
-            <RegionButton cities={Gangwon} setCity={setCity}/>
         </div>)}
 
     </div>
