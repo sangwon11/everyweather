@@ -38,8 +38,10 @@
 .search-bar input {
   border-radius: 50px;
   border: none;
+  outline: none;
   height: 40px;
   width: 300px;
+  padding-left: 20px;
 }
 
 .search-bar button {
