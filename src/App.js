@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import WeatherBox from './component/WeatherBox';
 import WeatherButton from './component/WeatherButton';
 import RegionButton from './component/RegionButton';
-import SearchBar from './component/SearchBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ClipLoader from "react-spinners/ClipLoader";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,7 +18,7 @@ function App() {
   const [backgroundImage, setBackgroundImage] = useState('url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5fGVufDB8fDB8fHww)');
   const [icon, setIcon] = useState("");
 
-  const cities = ["seoul", "incheon", "busan", "daegu", "daejeon", "ulsan", "gwangju", "jeju"]
+  const cities = ["seoul", "new york", "tokyo", "Berlin", "London", "paris", "Moscow", "Beijing"]
   const Gyeonggi = ["Suwon", "Seongnam", "Anyang", "Bucheon", "Ansan", "Goyang", "Gwacheon","Guri", "Namyangju", "Osan", "Gunpo", "Uiwang", "Hanam", "Yongin", "Paju", "Anseong", "Hwaseong", "Yangju", "Yeoju"]
   const Chungcheong = ["Cheongju", "Chungju", "Jecheon", "Cheonan", "Gongju", "Boryeong", "Asan", "Seosan", "Nonsan"]
   const Gyeongsang = ["Pohang", "Gyeongju", "Gimcheon", "Andong", "Gumi", "Yeongju", "Sangju", "Mungyeong", "Gyeongsan", "Changwon", "Jinju", "Sacheon", "Gimhae", "Miryang", "Yangsan"]
@@ -46,10 +45,19 @@ function App() {
   const getWeatherByCity = async() => {
     let url =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=74a971a9bfd6d01630ffc4aa5616f71d&units=metric`
     setLoading(true)
-    let response = await fetch(url);
-    let data = await response.json();
-    setWeather(data);
-    setLoading(false)
+    try {
+      let response = await fetch(url);
+      if (!response.ok) {
+      throw new Error("city not found");
+    }
+      let data = await response.json();
+      setWeather(data);
+    } catch (error) {
+      alert('wrong city name.');
+    } finally {
+      ;
+      setLoading(false)
+    }
   }
 
   useEffect(()=>{
