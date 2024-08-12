@@ -11,7 +11,7 @@ const WeatherBox = ({weather, icon, setCity}) => {
     if (weather?.name==="Seoul") {
       setImg('https://image.utoimage.com/preview/cp932674/2021/12/202112026486_500.jpg')
     } else if (weather?.name==="Busan") {
-      setImg('https://plus.unsplash.com/premium_photo-1661914310117-9875b2229719?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnVzYW58ZW58MHx8MHx8fDA%3D')
+      setImg('https://plus.unsplash.com/premium_photo-1661963130289-aa70dd516940?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
     } else if (weather?.name==="Incheon") {
       setImg('https://images.unsplash.com/photo-1671959670540-d56f2849a375?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8JUVDJTlEJUI4JUVDJUIyJTlDfGVufDB8fDB8fHww')
     } else if (weather?.name==="Daegu") {
@@ -21,7 +21,7 @@ const WeatherBox = ({weather, icon, setCity}) => {
     } else if (weather?.name==="Daejeon") {
       setImg('https://t3.ftcdn.net/jpg/03/35/97/54/240_F_335975468_IkB0LY9xFATYGl4QJgdtgAzVwiHkbEjk.jpg')
     } else if (weather?.name==='Gwangju') {
-      setImg('https://t4.ftcdn.net/jpg/04/74/31/63/240_F_474316388_NHooUW76hmOWTqbFekKtNTtyoHrysWzP.jpg')
+      setImg('https://png.pngtree.com/thumb_back/fw800/background/20230909/pngtree-aerial-view-of-gwanju-city-pmfmd93714-image_13102034.png')
     }
   }, [weather?.name])
 
