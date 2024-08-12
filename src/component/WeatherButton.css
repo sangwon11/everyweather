@@ -29,7 +29,6 @@
   position: absolute;
   left: 60px;
   z-index: 1;
-  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
 }
   
 .dropdown-item {
@@ -39,6 +38,7 @@
   margin-right: 5px;
   cursor: pointer;
  text-align: left;
+ box-shadow: 40px 0px 16px 0px rgba(0,0,0,0.2) !important;
 }
   
 .dropdown-item:hover {
