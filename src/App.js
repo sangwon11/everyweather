@@ -19,12 +19,36 @@ function App() {
 
   const cities = [
     {
+      country: 'KOREA',
+      cities: ['Seoul', 'Busan', 'incheon']
+    },
+    {
       country: 'USA',
       cities: ['New York', 'Los Angeles', 'Chicago']
     },
     {
       country: 'Canada',
       cities: ['Toronto', 'Vancouver', 'Montreal']
+    },
+    {
+      country: 'Japan',
+      cities: ['Tokyo', 'Osaka', 'Kyoto']
+    },
+    {
+      country: 'China',
+      cities: ['Beijing', 'Shanghai', 'Guangzhou']
+    },
+    {
+      country: 'Russia',
+      cities: ['Moscow', 'Saint Petersburg', 'Novosibirsk']
+    },
+    {
+      country: 'UK',
+      cities: ['London', 'Manchester', 'Birmingham']
+    },
+    {
+      country: 'Australia',
+      cities: ['Sydney', 'Melbourne', 'Brisbane']
     }
   ]
 
