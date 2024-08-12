@@ -95,6 +95,7 @@ function App() {
     }
   },[city])
 
+
   useEffect(()=>{
     if (weather) {
       const weatherConditions = {
