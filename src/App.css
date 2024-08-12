@@ -11,6 +11,13 @@
   height: 100vh;
 }
 
+.component-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
 .weather-box {
   height: 500px;
   width: 300px;
@@ -55,10 +62,10 @@
 
 .weather-btn {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 150px;
 }
 
 .btn {

@@ -95,9 +95,10 @@ function App() {
           <ClipLoader color="#f88c6b" loading={loading} size={150} /> 
         </div>
       ) : (
-        <div className='container'>
-            <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
+        <div className='component-area'>
             <WeatherButton cities={cities} setCity={setCity} />
+            <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
+            <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
         </div>)}
 
     </div>
