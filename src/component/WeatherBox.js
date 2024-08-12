@@ -9,7 +9,7 @@ const WeatherBox = ({weather, icon, setCity}) => {
         <SearchBar setCity={setCity}/>
         <div className='weather-info'>
           <div>{icon}</div>
-          <div>{weather?.name}</div>
+          <h2>{weather?.name}</h2>
           <h2>{weather?.main.temp}C / {Math.floor(weather?.main.temp * 1.8 +32)}F </h2>
           <h3>{weather?.weather[0].description}</h3>
         </div>

@@ -26,7 +26,7 @@ const WeatherButton = ({ cities, setCity }) => {
             onMouseEnter={() => handleMouseEnter(item.country)}
             onMouseLeave={handleMouseLeave}
           >
-            <button onClick={() => setCity(item.country)} className='btn'>
+            <button onClick={() => setCity(item.country)} className='btn country-btn'>
               {item.country}
             </button>
             {hoveredCity === item.country && (
