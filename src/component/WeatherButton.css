@@ -29,3 +29,7 @@
   .dropdown-item:hover {
     background-color: #ddd;
   }
+
+  .btn {
+    margin: 10px;
+  }
