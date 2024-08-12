@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
-const WeatherButton = ({cities, selectedCity, setCity}) => {
+const WeatherButton = ({cities, setCity}) => {
   console.log("cities",cities)
   return (
     <div className='weather-btn'>
@@ -13,7 +13,7 @@ const WeatherButton = ({cities, selectedCity, setCity}) => {
       </Button>
 
       {cities.map((item, index) => (
-        <Button 
+        <Button
           key={index}
           onClick={()=>setCity(item)}
           className='btn'

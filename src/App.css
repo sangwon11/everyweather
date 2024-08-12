@@ -13,7 +13,7 @@
 
 .component-area {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
 }
@@ -70,4 +70,5 @@
 
 .btn {
   margin: 10px;
+  background-color: red !important;
 }
