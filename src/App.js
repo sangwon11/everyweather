@@ -131,7 +131,7 @@ function App() {
         <div className='component-area'>
             <WeatherButton cities={cities} setCity={setCity} />
             <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
-            <WeatherButton cities={cities} setCity={setCity} />
+            <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
         </div>)}
 
     </div>

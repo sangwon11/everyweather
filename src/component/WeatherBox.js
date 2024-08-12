@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchBar from './SearchBar';
+import './WeatherBox.css';
 
 const WeatherBox = ({weather, icon, setCity}) => {
     console.log("weather",weather)
