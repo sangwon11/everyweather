@@ -28,6 +28,8 @@
   display: flex;
   flex-direction: column;
   position: absolute;
+  border: 1px solid;
+  z-index: 1;
   /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
 }
   
@@ -55,5 +57,5 @@
   font-weight: bolder !important;
   background: linear-gradient(45deg, #04f1dd, #057cfb);
   color: transparent !important;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; 
 }
