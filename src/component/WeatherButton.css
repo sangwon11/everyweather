@@ -1,0 +1,38 @@
+.weather-btn-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .weather-btn {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .country-button-container {
+    position: relative;
+  }
+  
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 100%;  /* 옆으로 나오도록 설정 */
+    top: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #ddd;
+  }

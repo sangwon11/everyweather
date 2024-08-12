@@ -59,16 +59,3 @@
   width: 40px;
   margin-left: 10px;
 }
-
-.weather-btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.btn {
-  margin: 10px;
-  background-color: red !important;
-}

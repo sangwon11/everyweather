@@ -2,7 +2,6 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import WeatherBox from './component/WeatherBox';
 import WeatherButton from './component/WeatherButton';
-import DropdownButton from './component/DropdownButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ClipLoader from "react-spinners/ClipLoader";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,7 +17,16 @@ function App() {
   const [backgroundImage, setBackgroundImage] = useState('url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5fGVufDB8fDB8fHww)');
   const [icon, setIcon] = useState("");
 
-  const cities = ["seoul", "new york", "tokyo", "Berlin", "London", "paris", "Moscow", "Beijing"]
+  const cities = [
+    {
+      country: 'USA',
+      cities: ['New York', 'Los Angeles', 'Chicago']
+    },
+    {
+      country: 'Canada',
+      cities: ['Toronto', 'Vancouver', 'Montreal']
+    }
+  ]
 
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position)=>{
@@ -99,7 +107,7 @@ function App() {
         <div className='component-area'>
             <WeatherButton cities={cities} setCity={setCity} />
             <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
-            <DropdownButton/>
+            <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
         </div>)}
 
     </div>
