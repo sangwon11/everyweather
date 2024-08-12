@@ -27,27 +27,27 @@ function App() {
       cities: ['New York', 'Los Angeles', 'Chicago']
     },
     {
-      country: 'Canada',
+      country: 'CANADA',
       cities: ['Toronto', 'Vancouver', 'Montreal']
     },
     {
-      country: 'Japan',
+      country: 'JAPAN',
       cities: ['Tokyo', 'Osaka', 'Kyoto']
     },
     {
-      country: 'China',
+      country: 'CHINA',
       cities: ['Beijing', 'Shanghai', 'Guangzhou']
     },
     {
-      country: 'Russia',
+      country: 'RUSSIA',
       cities: ['Moscow', 'Saint Petersburg', 'Novosibirsk']
     },
     {
-      country: 'UK',
-      cities: ['London', 'Manchester', 'Birmingham']
+      country: 'GERMANY',
+      cities: ['Berlin ', 'Munich', 'Hamburg']
     },
     {
-      country: 'Australia',
+      country: 'AUSTRALIA',
       cities: ['Sydney', 'Melbourne', 'Brisbane']
     }
   ]

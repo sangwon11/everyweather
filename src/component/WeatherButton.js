@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
 import './WeatherButton.css';
 
 const WeatherButton = ({ cities, setCity }) => {
@@ -16,9 +15,9 @@ const WeatherButton = ({ cities, setCity }) => {
   return (
     <div className='weather-btn-container'>
       <div className='weather-btn'>
-        <Button onClick={() => setCity('')} className='btn'>
+        <button onClick={() => setCity('')} className='btn'>
           Current Location
-        </Button>
+        </button>
 
         {cities.map((item, index) => (
           <div 
@@ -27,19 +26,19 @@ const WeatherButton = ({ cities, setCity }) => {
             onMouseEnter={() => handleMouseEnter(item.country)}
             onMouseLeave={handleMouseLeave}
           >
-            <Button onClick={() => setCity(item.country)} className='btn'>
+            <button onClick={() => setCity(item.country)} className='btn'>
               {item.country}
-            </Button>
+            </button>
             {hoveredCity === item.country && (
               <div className='dropdown'>
                 {item.cities.map((city, idx) => (
-                  <Button
+                  <button
                     key={idx}
                     onClick={() => setCity(city)}
                     className='btn dropdown-item'
                   >
                     {city}
-                  </Button>
+                  </button>
                 ))}
               </div>
             )}
