@@ -12,7 +12,7 @@ const WeatherBox = ({weather, icon, setCity}) => {
           <h2>{weather?.main.temp}C / {Math.floor(weather?.main.temp * 1.8 +32)}F </h2>
           <h3>{weather?.weather[0].description}</h3>
         </div>
-        <img src='https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/19/5e/41/entrance.jpg?w=1000&h=-1&s=1' />
+        <img src='https://image.utoimage.com/preview/cp932674/2021/12/202112026486_500.jpg' />
       </div>
   )
 }
