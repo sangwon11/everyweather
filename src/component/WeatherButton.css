@@ -10,25 +10,24 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    height: 100vh;
-    width: 300px;
+    justify-content: space-between;
+    height: 500px;
+    width: 300px; 
 }
   
 .country-button-container {
     position: relative;
     display: flex;
     justify-content: flex-start;
-    margin-top: 5px;
     width: 300px;
     height: 30px;
-   }
+}
   
 .dropdown {
   display: flex;
   flex-direction: column;
   position: absolute;
-  border: 1px solid;
+  left: 60px;
   z-index: 1;
   /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
 }
@@ -43,7 +42,9 @@
 }
   
 .dropdown-item:hover {
-  background-color: #1848e8 !important;
+  background: linear-gradient(45deg, #04f1dd, #057cfb);
+  color: transparent !important;
+    -webkit-background-clip: text; 
 }
 
 .country-btn {
@@ -55,7 +56,5 @@
 .btn {
   font-size: larger !important;
   font-weight: bolder !important;
-  background: linear-gradient(45deg, #04f1dd, #057cfb);
-  color: transparent !important;
-    -webkit-background-clip: text; 
+  color: white !important;
 }

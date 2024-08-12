@@ -5,7 +5,7 @@ import './WeatherBox.css';
 const WeatherBox = ({weather, icon, setCity}) => {
   console.log("weather", weather)
   
-  const [img, setImg] = useState('');
+  const [img, setImg] = useState(null);
 
   useEffect(() => {
     if (weather?.name==="Seoul") {
@@ -15,7 +15,7 @@ const WeatherBox = ({weather, icon, setCity}) => {
     } else if (weather?.name==="Incheon") {
       setImg('https://images.unsplash.com/photo-1671959670540-d56f2849a375?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8JUVDJTlEJUI4JUVDJUIyJTlDfGVufDB8fDB8fHww')
     } else if (weather?.name==="Daegu") {
-      setImg('https://t4.ftcdn.net/jpg/07/52/97/57/240_F_752975777_tm90kxrz3mrinmA5jkGRxyRgFpal4ULh.jpg')
+      setImg('https://t4.ftcdn.net/jpg/07/51/51/19/240_F_751511930_eUOrfLW9Cp9krmYw7qCyptBfp3Pm2yRa.jpg')
     } else if (weather?.name==="Ulsan") {
       setImg('https://t3.ftcdn.net/jpg/04/55/94/80/240_F_455948000_IkhPyIAP54nszQxiJQAbrol2aJOwibjL.jpg')
     } else if (weather?.name==="Daejeon") {
