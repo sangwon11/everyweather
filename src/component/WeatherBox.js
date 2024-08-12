@@ -5,7 +5,7 @@ import './WeatherBox.css';
 const WeatherBox = ({weather, icon, setCity}) => {
   console.log("weather", weather)
   
-  const [img, setImg] = useState(null);
+  const [img, setImg] = useState('https://images.unsplash.com/photo-1540198163009-7afda7da2945?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWFydGh8ZW58MHx8MHx8fDA%3D');
 
   useEffect(() => {
     if (weather?.name==="Seoul") {
