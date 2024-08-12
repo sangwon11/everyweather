@@ -20,35 +20,35 @@ function App() {
   const cities = [
     {
       country: 'KOREA',
-      cities: ['Seoul', 'Busan', 'incheon']
+      cities: ['Seoul', 'Busan', 'incheon', 'Daegu', 'Daejeon', 'Ulsan', 'Gwangju']
     },
     {
       country: 'USA',
-      cities: ['New York', 'Los Angeles', 'Chicago']
+      cities: ['Washington', 'New York', 'Los Angeles', 'Chicago', 'Las Vegas']
     },
     {
       country: 'CANADA',
-      cities: ['Toronto', 'Vancouver', 'Montreal']
+      cities: ['Toronto', 'Vancouver', 'Montreal', 'Ottawa', 'Calgary']
     },
     {
       country: 'JAPAN',
-      cities: ['Tokyo', 'Osaka', 'Kyoto']
+      cities: ['Tokyo', 'Osaka', 'Kyoto', 'Yokohama', 'Osaka']
     },
     {
       country: 'CHINA',
-      cities: ['Beijing', 'Shanghai', 'Guangzhou']
+      cities: ['Beijing', 'Shanghai', 'Guangzhou', 'Tianjin', 'Chongqing']
     },
     {
       country: 'RUSSIA',
-      cities: ['Moscow', 'Saint Petersburg', 'Novosibirsk']
+      cities: ['Moscow', 'Saint Petersburg', 'Novosibirsk', 'Yekaterinburg', 'Kazan']
     },
     {
       country: 'GERMANY',
-      cities: ['Berlin ', 'Munich', 'Hamburg']
+      cities: ['Berlin ', 'Munich', 'Hamburg', 'Cologne', 'Frankfurt']
     },
     {
       country: 'AUSTRALIA',
-      cities: ['Sydney', 'Melbourne', 'Brisbane']
+      cities: ['Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide']
     }
   ]
 
@@ -131,7 +131,7 @@ function App() {
         <div className='component-area'>
             <WeatherButton cities={cities} setCity={setCity} />
             <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
-            <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
+            <WeatherButton cities={cities} setCity={setCity} />
         </div>)}
 
     </div>
