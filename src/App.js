@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import WeatherBox from './component/WeatherBox';
 import WeatherButton from './component/WeatherButton';
+import Record from './component/Record';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ClipLoader from "react-spinners/ClipLoader";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -132,7 +133,7 @@ function App() {
         <div className='component-area'>
             <WeatherButton cities={cities} setCity={setCity} />
             <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
-            <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
+            <Record />
             <audio autoPlay>
               <source src='./song/Wheels - Audionautix.mp3' type='audio/mpeg'/>
             </audio>
