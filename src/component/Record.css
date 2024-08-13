@@ -22,3 +22,6 @@
     animation: playRecord 10s linear 0s infinite;
 }
 
+.record-container audio {
+    position: absolute;
+}
