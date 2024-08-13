@@ -132,8 +132,9 @@ function App() {
         <div className='component-area'>
             <WeatherButton cities={cities} setCity={setCity} />
             <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
-            <audio controls>
-              <source src='./song/sample_audio_ogg.ogg' type='audio/ogg'/>
+            <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
+            <audio autoPlay>
+              <source src='./song/Wheels - Audionautix.mp3' type='audio/mpeg'/>
             </audio>
         </div>)}
 
