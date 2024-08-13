@@ -17,11 +17,12 @@
 
 .record-container img {
     position: relative;
-    right: -90px;
+    right: -6.5vw;
     width: 600px;
     animation: playRecord 10s linear 0s infinite;
 }
 
 .record-container audio {
     position: absolute;
+    background: transparent !important;
 }
