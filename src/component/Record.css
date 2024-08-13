@@ -6,8 +6,19 @@
     position: relative;
 }
 
-.record-container img {
-    height: 800px;
-    position: absolute;
-    top: -140px;
+@keyframes playRecord {
+    from {
+      transform: rotateZ(0);
+    }
+    to {
+      transform: rotateZ(360deg);
+    }
 }
+
+.record-container img {
+    position: relative;
+    right: -90px;
+    width: 600px;
+    animation: playRecord 10s linear 0s infinite;
+}
+

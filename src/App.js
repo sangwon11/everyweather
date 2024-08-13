@@ -134,9 +134,6 @@ function App() {
             <WeatherButton cities={cities} setCity={setCity} />
             <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
             <Record />
-            <audio autoPlay controls>
-              <source src='./song/Wheels - Audionautix.mp3' type='audio/mpeg'/>
-            </audio>
         </div>)}
 
     </div>
