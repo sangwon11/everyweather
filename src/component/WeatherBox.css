@@ -16,8 +16,9 @@
   
   .weather-info {
     z-index: 1;
-    width: 190px;
+    width: 200px;
     height: 180px;
+    padding-left: 10px;
   }
   
   .weather-box img {
