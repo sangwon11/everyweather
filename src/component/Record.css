@@ -21,3 +21,8 @@
     animation: playRecord 10s linear 0s infinite;
     z-index: 1;
 }
+
+.record-container audio {
+  position: fixed;
+  right: -20vw;
+}

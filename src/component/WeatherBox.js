@@ -5,7 +5,7 @@ import './WeatherBox.css';
 const WeatherBox = ({weather, icon, setCity}) => {
   console.log("weather", weather)
   
-  const [img, setImg] = useState(null);
+  const [img, setImg] = useState('https://images.unsplash.com/photo-1540198163009-7afda7da2945?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWFydGh8ZW58MHx8MHx8fDA%3D');
 
   useEffect(() => {
     const cityImages = {
@@ -68,7 +68,7 @@ const WeatherBox = ({weather, icon, setCity}) => {
           <h2>{weather?.main.temp}C / {Math.floor(weather?.main.temp * 1.8 +32)}F </h2>
           <h3>{weather?.weather[0].description}</h3>
         </div>
-        <img src={img} />
+        <img className='cityImg' src={img} />
       </div>
   )
 }
