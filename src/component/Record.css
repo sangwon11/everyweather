@@ -16,8 +16,8 @@
 
 .record-container img {
     position: fixed;
-    right: -20vw;
-    width: 540px;
+    right: -19vw;
+    width: 500px;
     animation: playRecord 25s linear 0s infinite;
     z-index: 1;
 }
