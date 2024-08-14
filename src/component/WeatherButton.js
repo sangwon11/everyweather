@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './WeatherButton.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const WeatherButton = ({ cities, setCity }) => {
   const [hoveredCity, setHoveredCity] = useState(null);
@@ -16,7 +18,7 @@ const WeatherButton = ({ cities, setCity }) => {
     <div className='weather-btn-container'>
       <div className='weather-btn'>
         <button onClick={() => setCity('')} className='btn'>
-          Current Location
+        <FontAwesomeIcon icon={faGlobe} />
         </button>
 
         {cities.map((item, index) => (
