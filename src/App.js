@@ -102,10 +102,10 @@ function App() {
     if (weather) {
       const weatherConditions = {
         Rain: { backgroundImage: 'url(https://images.unsplash.com/photo-1437624155766-b64bf17eb2ce?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-          icon: faCloudRain, audio: './song/rain.mp3'
+          icon: faCloudRain, audio: '/song/rain.mp3'
         },
         Clouds: { backgroundImage: 'url(https://images.unsplash.com/photo-1504253163759-c23fccaebb55?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-          icon: faCloud, audio: './song/lazy.mp3'
+          icon: faCloud, audio: '/song/lazy.mp3'
         },
         Drizzle: { backgroundImage: 'url(https://images.unsplash.com/photo-1508873760731-9c3d0bb6b961?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)', 
           icon: faDroplet, audio: './song/drizzle.mp3'
@@ -178,7 +178,7 @@ function App() {
         <div className='component-area'>
             <WeatherButton cities={cities} setCity={setCity} />
             <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
-            <Record audio={audio} />
+            <Record audio={audio} weather={weather} />
         </div>)}
 
     </div>

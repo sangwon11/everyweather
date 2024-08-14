@@ -5,6 +5,19 @@
     align-items: center;
 }
 
+.bgm-info {
+  position: relative;
+  left: -5vw;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  font-size: larger !important;
+  font-weight: bolder !important;
+  color: white !important;
+}
+
 @keyframes playRecord {
     from {
       transform: rotateZ(0);
@@ -19,7 +32,6 @@
     right: -18vw;
     width: 500px;
     animation: playRecord 25s linear 0s infinite;
-    z-index: 1;
 }
 
 .record-container audio {
