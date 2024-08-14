@@ -33,7 +33,7 @@ function App() {
     },
     {
       country: 'JAPAN',
-      cities: ['Tokyo', 'Osaka', 'Kyoto', 'Yokohama', 'Osaka']
+      cities: ['Tokyo', 'Osaka', 'Kyoto', 'Yokohama', 'Nagoya']
     },
     {
       country: 'CHINA',
@@ -45,7 +45,7 @@ function App() {
     },
     {
       country: 'GERMANY',
-      cities: ['Berlin ', 'Munich', 'Hamburg', 'Cologne', 'Frankfurt']
+      cities: ['Berlin', 'Munich', 'Hamburg', 'Cologne', 'Frankfurt']
     },
     {
       country: 'AUSTRALIA',
