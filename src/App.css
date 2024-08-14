@@ -1,5 +1,7 @@
 .background {
   background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 .container {
@@ -15,4 +17,5 @@
   justify-content: space-around;
   align-items: center;
   height: 100vh;
+  position: relative;
 }

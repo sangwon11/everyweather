@@ -3,7 +3,6 @@
     height: 500px;
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 @keyframes playRecord {
@@ -16,13 +15,9 @@
 }
 
 .record-container img {
-    position: relative;
-    right: -6.5vw;
-    width: 600px;
+    position: fixed;
+    right: -20vw;
+    width: 540px;
     animation: playRecord 10s linear 0s infinite;
-}
-
-.record-container audio {
-    position: absolute;
-    background: transparent !important;
+    z-index: 1;
 }

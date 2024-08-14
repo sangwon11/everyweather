@@ -21,7 +21,7 @@ function App() {
   const cities = [
     {
       country: 'KOREA',
-      cities: ['Seoul', 'Busan', 'incheon', 'Daegu', 'Daejeon', 'Ulsan', 'Gwangju']
+      cities: ['Seoul', 'Busan', 'Incheon', 'Daegu', 'Daejeon', 'Ulsan', 'Gwangju']
     },
     {
       country: 'USA',
