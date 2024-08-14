@@ -117,13 +117,13 @@ function App() {
           icon: faSnowflake, audio: './song/snow.mp3'
         },
         Mist: { backgroundImage: 'url(https://images.unsplash.com/photo-1603794052293-650dbdeef72c?q=80&w=2912&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)', 
-          icon: faSmog, audio: './song/lazy.mp3'
+          icon: faSmog, audio: './song/mist.mp3'
         },
         Smoke: { backgroundImage: 'url(https://images.unsplash.com/photo-1626535683369-0edf8fb3bd58?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-          icon: faSmog, audio: './song/rain.mp3'
+          icon: faSmog, audio: './song/smoke.mp3'
         },
         Haze: { backgroundImage: 'url(https://plus.unsplash.com/premium_photo-1666211586138-d40960820390?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)', 
-          icon: faSmog, audio: './song/rain.mp3'
+          icon: faSmog, audio: './song/haze.mp3'
         },
         Dust: { backgroundImage: 'url(https://images.unsplash.com/photo-1603695820889-f8a0a86b8712?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
           icon: faSmog, audio: './song/rain.mp3'
