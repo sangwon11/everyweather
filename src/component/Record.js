@@ -6,9 +6,7 @@ const Record = (audio) => {
   return (
     <div className='record-container'>
           <img src='./img/record.png' />
-          <audio autoPlay controls>
-              <source src='./song/rain.mp3' type='audio/mpeg'/>
-            </audio>
+          <audio src={audio} autoPlay></audio>
     </div>
   )
 }
