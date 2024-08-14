@@ -108,13 +108,13 @@ function App() {
           icon: faCloud, audio: './song/lazy.mp3'
         },
         Drizzle: { backgroundImage: 'url(https://images.unsplash.com/photo-1508873760731-9c3d0bb6b961?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)', 
-          icon: faDroplet, audio: './song/rain.mp3'
+          icon: faDroplet, audio: './song/drizzle.mp3'
         },
         Thunderstorm: { backgroundImage: 'url(https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)', 
           icon: faCloudBolt, audio: './song/rain.mp3'
         },
         Snow: { backgroundImage: 'url(https://images.unsplash.com/photo-1511131341194-24e2eeeebb09?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)', 
-          icon: faSnowflake, audio: './song/rain.mp3'
+          icon: faSnowflake, audio: './song/snow.mp3'
         },
         Mist: { backgroundImage: 'url(https://images.unsplash.com/photo-1603794052293-650dbdeef72c?q=80&w=2912&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)', 
           icon: faSmog, audio: './song/lazy.mp3'

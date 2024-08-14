@@ -18,7 +18,7 @@
     position: fixed;
     right: -20vw;
     width: 540px;
-    animation: playRecord 10s linear 0s infinite;
+    animation: playRecord 25s linear 0s infinite;
     z-index: 1;
 }
 
