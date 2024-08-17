@@ -178,7 +178,7 @@ function App() {
         <div className='component-area'>
             <WeatherButton cities={cities} setCity={setCity} />
             <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
-            <Record audio={audio} weather={weather} />
+            <Record audio={audio} weather={weather} setCity={setCity}/>
         </div>)}
 
     </div>
