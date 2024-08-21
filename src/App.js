@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloud, faCloudBolt, faCloudRain, faDroplet, faSmog, faTornado, faVolcano, faWind } from '@fortawesome/free-solid-svg-icons';
 import { faSnowflake, faSun } from '@fortawesome/free-regular-svg-icons';
 
-
 function App() {
 
   const [weather, setWeather] = useState(null);
