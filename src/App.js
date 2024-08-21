@@ -115,7 +115,7 @@ function App() {
             {audio: '/song/clouds3.mp3', title: 'PEOPLE', artistName: 'CODE KUNST(Feat. Paloalto, The Quiett)'},
             {audio: '/song/clouds4.mp3', title: '북향', artistName: 'Dynamicduo, (Feat. 오혁)'},
             {audio: '/song/clouds5.mp3', title: '숨', artistName: '박효신'},
-            {audio: '/song/clouds5.mp3', title: '한숨', artistName: 'Lee HI (이하이)'}
+            {audio: '/song/clouds6.mp3', title: '한숨', artistName: 'Lee HI (이하이)'}
 
           ]
         },
