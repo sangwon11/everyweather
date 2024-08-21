@@ -112,7 +112,10 @@ function App() {
           icon: faCloud, 
           song: [{audio: '/song/clouds1.mp3', title: 'WI ING WI ING', artistName: 'HYUKOH (혁오)'},
             {audio: '/song/clouds2.mp3', title: '어떻게 지내', artistName: 'OVAN (오반)'},
-            {audio: '/song/clouds3.mp3', title: 'PEOPLE', artistName: 'CODE KUNST(Feat. Paloalto, The Quiett)'}
+            {audio: '/song/clouds3.mp3', title: 'PEOPLE', artistName: 'CODE KUNST(Feat. Paloalto, The Quiett)'},
+            {audio: '/song/clouds4.mp3', title: '북향', artistName: 'Dynamicduo, (Feat. 오혁)'},
+            {audio: '/song/clouds5.mp3', title: '숨', artistName: '박효신'},
+            {audio: '/song/clouds5.mp3', title: '한숨', artistName: 'Lee HI (이하이)'}
 
           ]
         },
@@ -157,7 +160,8 @@ function App() {
           song: [{ audio: './song/clear1.mp3', title: '몇 번의 여름', artistName: 'TOIL, Gist' },
             { audio: './song/clear2.mp3', title: '우연히 봄', artistName: '로꼬, 유주' },
             {audio: './song/clear3.mp3', title: '나만, 봄', artistName: '볼빨간사춘기'},
-            {audio: './song/clear4.mp3', title: '봄눈', artistName: '10CM'}
+            {audio: './song/clear4.mp3', title: '봄눈', artistName: '10CM'},
+            {audio: './song/clear4.mp3', title: '봄을 노래하다', artistName: '40'}
           ]
         }
       }
