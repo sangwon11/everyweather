@@ -105,7 +105,8 @@ function App() {
           icon: faCloudRain, 
           song: [{audio: '/song/rain.mp3', title: 'Rainy day', artistName: 'PATEKO(Feat. ASH ISLAND, Skinny Brown)'},
             {audio: './song/drizzle.mp3', title: '봄비', artistName: '신스(feat. Rakon)'},
-            {audio: '/song/rain2.mp3', title: 'Medley', artistName: 'C JAMM (씨잼)'}
+            {audio: '/song/rain2.mp3', title: 'Medley', artistName: 'C JAMM (씨잼)'},
+            {audio: '/song/rain3.mp3', title: '우리의 밤을 외워요', artistName: 'Car, the garden'},
           ]
         },
         Clouds: { backgroundImage: 'url(https://images.unsplash.com/photo-1504253163759-c23fccaebb55?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
@@ -115,7 +116,9 @@ function App() {
             {audio: '/song/clouds3.mp3', title: 'PEOPLE', artistName: 'CODE KUNST(Feat. Paloalto, The Quiett)'},
             {audio: '/song/clouds4.mp3', title: '북향', artistName: 'Dynamicduo, (Feat. 오혁)'},
             {audio: '/song/clouds5.mp3', title: '숨', artistName: '박효신'},
-            {audio: '/song/clouds6.mp3', title: '한숨', artistName: 'Lee HI (이하이)'}
+            {audio: '/song/clouds6.mp3', title: '한숨', artistName: 'Lee HI (이하이)'},
+            {audio: '/song/clouds7.mp3', title: '40', artistName: 'Vasco(Feat. 40)'},
+            {audio: '/song/clouds8.mp3', title: 'City', artistName: 'Owen (오왼)'},
 
           ]
         },
