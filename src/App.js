@@ -164,7 +164,7 @@ function App() {
             { audio: './song/clear2.mp3', title: '우연히 봄', artistName: '로꼬, 유주' },
             {audio: './song/clear3.mp3', title: '나만, 봄', artistName: '볼빨간사춘기'},
             {audio: './song/clear4.mp3', title: '봄눈', artistName: '10CM'},
-            {audio: './song/clear4.mp3', title: '봄을 노래하다', artistName: '40'}
+            {audio: './song/clear5.mp3', title: '봄을 노래하다', artistName: '40'}
           ]
         }
       }
