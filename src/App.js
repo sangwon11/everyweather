@@ -206,7 +206,7 @@ function App() {
       {loading ? ( 
         <div className='component-area'>
           <WeatherButton cities={cities} setCity={setCity} />
-          <ClipLoader color="#f88c6b" loading={loading} size={150} />
+          <ClipLoader color="#f88c6b" loading={loading} size={300} />
           <Record audio={audio} weather={weather} title={title} artistName={artistName}/>
         </div>
       ) : (
