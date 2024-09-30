@@ -19,3 +19,14 @@
   height: 100vh;
   position: relative;
 }
+
+@media screen and (max-width: 768px) {
+  .component-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .component-area > :not(.weather-box) {
+    display: none;
+  }
+}

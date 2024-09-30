@@ -204,8 +204,10 @@ function App() {
     <div className='background' style={{backgroundImage}}>
 
       {loading ? ( 
-        <div className='container'>
-          <ClipLoader color="#f88c6b" loading={loading} size={150} /> 
+        <div className='component-area'>
+          <WeatherButton cities={cities} setCity={setCity} />
+          <ClipLoader color="#f88c6b" loading={loading} size={150} />
+          <Record audio={audio} weather={weather} title={title} artistName={artistName}/>
         </div>
       ) : (
         <div className='component-area'>
