@@ -165,6 +165,7 @@ function App() {
             {audio: './song/clear4.mp3', title: '봄눈', artistName: '10CM'},
             {audio: './song/clear5.mp3', title: '봄을 노래하다', artistName: '40'}
           ]
+          
         }
       }
       const condition = weatherConditions[weather.weather[0].main] || weatherConditions.Clear;
