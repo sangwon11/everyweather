@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './Record.css';
 
-const Record = ({audio, title, artistName, weather,}) => {
+const Record = ({audio, title, artistName, weather, city}) => {
   console.log('audio', weather)
   
   return (
-    <div className='record-container'>
+    <div className={`record-container ${!city ? 'paused' : ''}`}>
       <div className='bgm-info'>
         <div className='title'>{title}</div>
         <div>{artistName}</div>

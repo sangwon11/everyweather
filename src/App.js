@@ -208,13 +208,13 @@ function App() {
         <div className='component-area'>
           <WeatherButton cities={cities} setCity={setCity} />
           <ClipLoader color="#f88c6b" loading={loading} size={300} />
-          <Record audio={audio} weather={weather} title={title} artistName={artistName}/>
+          <Record audio={audio} weather={weather} title={title} artistName={artistName} city={city}/>
         </div>
       ) : (
         <div className='component-area'>
             <WeatherButton cities={cities} setCity={setCity} />
             <WeatherBox weather={weather} icon={icon} city={city} setCity={setCity}/>
-            <Record audio={audio} weather={weather} title={title} artistName={artistName}/>
+            <Record audio={audio} weather={weather} title={title} artistName={artistName} city={city}/>
         </div>)}
 
     </div>

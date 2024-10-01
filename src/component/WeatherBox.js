@@ -62,7 +62,7 @@ const WeatherBox = ({weather, icon, setCity, city}) => {
   if (!city) {
     return (
       <div className='weather-box'>
-        <h1>Weather Vibe</h1>
+        <SearchBar setCity={setCity}/>
       </div>
     );
   }
