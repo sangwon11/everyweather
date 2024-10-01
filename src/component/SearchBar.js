@@ -15,7 +15,12 @@ const SearchBar = ({ setCity }) => {
         type='text' 
         placeholder='Search(english)' 
         value={searchQuery} 
-        onChange={(e) => setSearchQuery(e.target.value)} 
+        onChange={(e) => setSearchQuery(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            handleSearch();
+          }
+        }}
       />
       <button onClick={handleSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
     </div>
