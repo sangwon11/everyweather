@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import './WeatherBox.css';
 
-const WeatherBox = ({weather, icon, setCity}) => {
+const WeatherBox = ({weather, icon, setCity, city}) => {
   console.log("weather", weather)
   
   const [img, setImg] = useState('https://images.unsplash.com/photo-1540198163009-7afda7da2945?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWFydGh8ZW58MHx8MHx8fDA%3D');
@@ -58,6 +58,14 @@ const WeatherBox = ({weather, icon, setCity}) => {
       setImg(cityImages[weather.name]);
     }
   }, [weather?.name])
+
+  if (!city) {
+    return (
+      <div className='weather-box'>
+        <h1>Weather Vibe</h1>
+      </div>
+    );
+  }
 
   return (
       <div className='weather-box'>

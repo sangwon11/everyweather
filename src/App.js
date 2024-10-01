@@ -92,6 +92,8 @@ function App() {
 
   useEffect(()=>{
     if (city=="") {
+      return;
+    } else if (city=="current") {
       getCurrentLocation()
     } else {
       getWeatherByCity()
@@ -211,7 +213,7 @@ function App() {
       ) : (
         <div className='component-area'>
             <WeatherButton cities={cities} setCity={setCity} />
-            <WeatherBox weather={weather} icon={icon} setCity={setCity}/>
+            <WeatherBox weather={weather} icon={icon} city={city} setCity={setCity}/>
             <Record audio={audio} weather={weather} title={title} artistName={artistName}/>
         </div>)}
 

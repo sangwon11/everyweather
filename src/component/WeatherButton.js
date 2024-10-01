@@ -17,7 +17,7 @@ const WeatherButton = ({ cities, setCity }) => {
   return (
     <div className='weather-btn-container'>
       <div className='weather-btn'>
-        <button onClick={() => setCity('')} className='btn'>
+        <button onClick={() => setCity('current')} className='btn'>
         <FontAwesomeIcon icon={faGlobe} />
         </button>
 
