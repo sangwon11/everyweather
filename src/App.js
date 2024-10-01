@@ -119,7 +119,6 @@ function App() {
             {audio: '/song/clouds6.mp3', title: '한숨', artistName: 'Lee HI (이하이)'},
             {audio: '/song/clouds7.mp3', title: '40', artistName: 'Vasco(Feat. 40)'},
             {audio: '/song/clouds8.mp3', title: 'City', artistName: 'Owen (오왼)'},
-
           ]
         },
         Drizzle: { backgroundImage: 'url(https://images.unsplash.com/photo-1508873760731-9c3d0bb6b961?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)', 
