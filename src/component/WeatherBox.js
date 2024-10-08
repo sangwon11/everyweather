@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import './WeatherBox.css';
+import NewsComponent from './NewsComponent';
 
 const WeatherBox = ({weather, icon, setCity, city}) => {
   console.log("weather", weather)
@@ -61,13 +62,16 @@ const WeatherBox = ({weather, icon, setCity, city}) => {
 
   if (!city) {
     return (
+      <div className='weather-news'>
       <div className='weather-box'>
         <SearchBar setCity={setCity}/>
+      </div>
       </div>
     );
   }
 
   return (
+    <div className='weather-news'>
       <div className='weather-box'>
         <SearchBar setCity={setCity}/>
         <div className='weather-info'>
@@ -78,6 +82,8 @@ const WeatherBox = ({weather, icon, setCity, city}) => {
         </div>
         <img className='cityImg' src={img} />
       </div>
+      <NewsComponent/>
+    </div>
   )
 }
 

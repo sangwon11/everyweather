@@ -206,15 +206,19 @@ function App() {
 
       {loading ? ( 
         <div className='component-area'>
-          <WeatherButton cities={cities} setCity={setCity} />
-          <ClipLoader color="#f88c6b" loading={loading} size={300} />
+          <div className='box-record'>
+          <ClipLoader color="#f88c6b" loading={loading} size={500} />
           <Record audio={audio} weather={weather} title={title} artistName={artistName} city={city}/>
+          </div>
+          <WeatherButton cities={cities} setCity={setCity} />
         </div>
       ) : (
         <div className='component-area'>
-            <WeatherButton cities={cities} setCity={setCity} />
-            <WeatherBox weather={weather} icon={icon} city={city} setCity={setCity}/>
+          <div className='box-record'>
+            <WeatherBox weather={weather} icon={icon} city={city} setCity={setCity} />
             <Record audio={audio} weather={weather} title={title} artistName={artistName} city={city}/>
+            </div>
+            <WeatherButton cities={cities} setCity={setCity} />
         </div>)}
 
     </div>

@@ -15,6 +15,7 @@ const WeatherButton = ({ cities, setCity }) => {
   };
 
   return (
+    <div className='layout-container'>
     <div className='weather-btn-container'>
       <div className='weather-btn'>
         <button onClick={() => setCity('current')} className='btn'>
@@ -47,6 +48,7 @@ const WeatherButton = ({ cities, setCity }) => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };
