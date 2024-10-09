@@ -14,18 +14,8 @@
 
 .component-area {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
   position: relative;
-}
-
-.box-record {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  margin-top: 100px;
-  margin-bottom: 50px;
 }

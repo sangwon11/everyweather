@@ -5,11 +5,12 @@
 }
 
 .weather-btn {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    align-items: center;
-    width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 500px;
+  width: 300px;
 }
   
 .country-button-container {
