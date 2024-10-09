@@ -203,7 +203,6 @@ function App() {
 
   return (
     <div className='background' style={{backgroundImage}}>
-
       {loading ? ( 
         <div className='component-area'>
           <WeatherButton cities={cities} setCity={setCity} />
@@ -216,7 +215,6 @@ function App() {
             <WeatherBox weather={weather} icon={icon} city={city} setCity={setCity} />
             <Record audio={audio} weather={weather} title={title} artistName={artistName} city={city}/>
         </div>)}
-
     </div>
   );
 }

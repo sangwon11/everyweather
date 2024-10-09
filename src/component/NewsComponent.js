@@ -6,6 +6,7 @@ const API_KEY = process.env.REACT_APP_NEWS_API_KEY;  // .env에서 API 키 가�
 
 const NewsComponent = () => {
   const [articles, setArticles] = useState([]);
+  const [category, setCategory] = useState('business');  // 기본 카테고리를 'business'로 설정
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -14,8 +15,7 @@ const NewsComponent = () => {
           `https://newsapi.org/v2/top-headlines`,
           {
             params: {
-              country: 'us',  // 원하는 국가 설정 (예: 'kr'은 한국)
-              category: 'sports',  // 카테고리 설정 (예: 'technology', 'sports' 등)
+              category: category,  // 선택된 카테고리를 요청에 포함
               apiKey: API_KEY,  // API 키 포함
             },
           }
@@ -27,11 +27,22 @@ const NewsComponent = () => {
     };
 
     fetchNews();
-  }, []);
+  }, [category]);  // 카테고리가 변경될 때마다 뉴스 다시 가져오기
 
   return (
     <div className='news-container'>
       <h1>Top News</h1>
+
+      {/* 카테고리 선택 드롭다운 */}
+      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <option value="business">Business</option>
+        <option value="technology">Technology</option>
+        <option value="sports">Sports</option>
+        <option value="health">Health</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="science">Science</option>
+      </select>
+
       <ul>
         {articles.map((article, index) => (
           <li key={index}>
