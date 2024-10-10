@@ -2,7 +2,7 @@ import './Record.css';
 
 const Record = ({ audio, title, artistName, city, isPlaying, togglePlayPause, playNextSong }) => {
   return (
-    <div className={`record-container ${!city ? 'paused' : ''}`}>
+    <div className={`record-container ${!city || !isPlaying ? 'paused' : ''}`}>
       <div className='bgm-info'>
         <div className='title'>{title}</div>
         <div>{artistName}</div>
