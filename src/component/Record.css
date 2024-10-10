@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  text-align: center;
   color: white;
   margin-left: 50px;
 }
@@ -46,4 +47,8 @@
 .record-container audio {
   position: fixed;
   right: -20vw;
+}
+
+.controls {
+  z-index: 2;
 }
