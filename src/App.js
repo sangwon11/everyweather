@@ -38,13 +38,13 @@ function App() {
       country: 'JAPAN',
       cities: ['Tokyo', 'Osaka', 'Kyoto', 'Yokohama', 'Nagoya']
     },
-    {
-      country: 'CHINA',
-      cities: ['Beijing', 'Shanghai', 'Guangzhou', 'Tianjin', 'Chongqing']
+    { 
+      country: 'THAILAND', 
+      cities: ['Bangkok', 'Chiang Mai', 'Pattaya', 'Phuket', 'Hat Yai']
     },
-    {
-      country: 'RUSSIA',
-      cities: ['Moscow', 'Saint Petersburg', 'Novosibirsk', 'Yekaterinburg', 'Kazan']
+    { 
+      country: 'VIETNAM', 
+      cities: ['Hanoi', 'Ho Chi Minh City', 'Da Nang', 'Haiphong', 'Nha Trang']
     },
     {
       country: 'GERMANY',
