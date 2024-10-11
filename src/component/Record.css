@@ -2,6 +2,8 @@
     width: 300px;
     height: 500px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -51,4 +53,11 @@
 
 .controls {
   z-index: 2;
+  margin-left: 70px;
+}
+
+.controls button {
+  border: none;
+  background-color: transparent;
+  color: white;
 }

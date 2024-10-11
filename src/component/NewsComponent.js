@@ -6,7 +6,7 @@ const API_KEY = process.env.REACT_APP_CURRENTS_API_KEY;
 
 const NewsComponent = () => {
   const [articles, setArticles] = useState([]);
-  const [query, setQuery] = useState('technology');  // 기본 검색어를 'technology'로 설정
+  const [query, setQuery] = useState('경제');  // 기본 검색어를 'technology'로 설정
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -32,6 +32,16 @@ const NewsComponent = () => {
 
   return (
     <div className='news-container'>
+      <h1>Search News</h1>
+
+      {/* 검색어 입력 필드 */}
+      <input 
+        type="text" 
+        value={query} 
+        onChange={(e) => setQuery(e.target.value)} 
+        placeholder="검색어를 입력하세요"
+      />
+
       <ul>
         {articles.map((article, index) => (
           <li key={index}>
@@ -46,3 +56,4 @@ const NewsComponent = () => {
 };
 
 export default NewsComponent;
+
