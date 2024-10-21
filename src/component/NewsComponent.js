@@ -44,7 +44,7 @@ const NewsComponent = () => {
 
       <ul>
         {articles.map((article, index) => (
-          <li key={index}>
+          <li className='news-background' key={index}>
             <h2>{article.title}</h2>
             <p>{article.description}</p>
             <a href={article.url} target="_blank" rel="noopener noreferrer">Read More</a>

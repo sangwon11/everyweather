@@ -1,6 +1,13 @@
 .news-container {
     width: 600px;
     overflow-y: auto;
-    color: white;
     border-top-right-radius: 20px;
+}
+
+.news-container h1 {
+    color: white;
+}
+
+.news-background {
+    background-color: white;
 }
