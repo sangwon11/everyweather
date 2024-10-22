@@ -4,6 +4,7 @@ import './NewsComponent.css';
 
 const API_KEY = process.env.REACT_APP_CURRENTS_API_KEY;
 
+
 const NewsComponent = () => {
   const [articles, setArticles] = useState([]);
   const [query, setQuery] = useState('경제');  // 기본 검색어를 'technology'로 설정
