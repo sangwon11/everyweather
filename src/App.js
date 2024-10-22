@@ -64,6 +64,7 @@ function App() {
         { audio: './song/drizzle.mp3', title: '봄비', artistName: '신스(feat. Rakon)' },
         { audio: '/song/rain2.mp3', title: 'Medley', artistName: 'C JAMM (씨잼)' },
         { audio: '/song/rain3.mp3', title: '우리의 밤을 외워요', artistName: 'Car, the garden' },
+        { audio: '/song/rain4.mp3', title: 'For U', artistName: 'Gist(feat. Loco, Coogie)' },
       ]
     },
     Clouds: {
@@ -77,6 +78,7 @@ function App() {
         { audio: '/song/clouds6.mp3', title: '한숨', artistName: 'Lee HI (이하이)' },
         { audio: '/song/clouds7.mp3', title: '40', artistName: 'Vasco(Feat. 40)' },
         { audio: '/song/clouds8.mp3', title: 'City', artistName: 'Owen (오왼)' },
+        { audio: '/song/clouds9.mp3', title: '너나잘하셔', artistName: 'Gist (feat. meenoi)' },
       ]
     },
     Drizzle: {
@@ -134,7 +136,10 @@ function App() {
         { audio: './song/clear2.mp3', title: '우연히 봄', artistName: '로꼬, 유주' },
         { audio: './song/clear3.mp3', title: '나만, 봄', artistName: '볼빨간사춘기' },
         { audio: './song/clear4.mp3', title: '봄눈', artistName: '10CM' },
-        { audio: './song/clear5.mp3', title: '봄을 노래하다', artistName: '40' }
+        { audio: './song/clear5.mp3', title: '봄을 노래하다', artistName: '40' },
+        { audio: './song/clear6.mp3', title: '끝말잇기', artistName: 'TOIL, Gist (feat. Skinny Brown)' },
+        { audio: './song/clear7.mp3', title: 'All I Wanna Do', artistName: 'Jay Park' },
+        { audio: './song/clear8.mp3', title: 'I', artistName: '태연 (feat. 버벌진트)' },
       ]
     }
   }
