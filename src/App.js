@@ -65,6 +65,7 @@ function App() {
         { audio: '/song/rain2.mp3', title: 'Medley', artistName: 'C JAMM (씨잼)' },
         { audio: '/song/rain3.mp3', title: '우리의 밤을 외워요', artistName: 'Car, the garden' },
         { audio: '/song/rain4.mp3', title: 'For U', artistName: 'Gist(feat. Loco, Coogie)' },
+        { audio: '/song/rain5.mp3', title: '비행', artistName: 'E SENS' },
       ]
     },
     Clouds: {
