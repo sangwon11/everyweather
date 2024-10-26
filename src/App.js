@@ -55,6 +55,7 @@ function App() {
       cities: ['Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide']
     }
   ]
+  
 
   const weatherConditions = {
     Rain: {
