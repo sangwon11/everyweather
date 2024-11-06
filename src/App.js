@@ -47,8 +47,56 @@ function App() {
       cities: ['Hanoi', 'Ho Chi Minh City', 'Da Nang', 'Haiphong', 'Nha Trang']
     },
     {
+      "country": "UNITED KINGDOM",
+      "cities": ["London", "Birmingham", "Manchester", "Glasgow", "Liverpool"]
+    },
+    {
+      "country": "IRELAND",
+      "cities": ["Dublin", "Cork", "Limerick", "Galway", "Waterford"]
+    },
+    {
       country: 'GERMANY',
       cities: ['Berlin', 'Munich', 'Hamburg', 'Cologne', 'Frankfurt']
+    },
+    {
+      "country": "CZECH",
+      "cities": ["Prague", "Brno", "Ostrava", "Plzeň", "Liberec"]
+    },
+    {
+      "country": "AUSTRIA",
+      "cities": ["Vienna", "Graz", "Linz", "Salzburg", "Innsbruck"]
+    },
+    {
+      "country": "SWITZERLAND",
+      "cities": ["Zurich", "Geneva", "Basel", "Lausanne", "Bern"]
+    },
+    {
+      "country": "FRANCE",
+      "cities": ["Paris", "Marseille", "Lyon", "Toulouse", "Nice"]
+    },
+    {
+      "country": "NETHERLANDS",
+      "cities": ["Amsterdam", "Rotterdam", "The Hague", "Utrecht", "Eindhoven"]
+    },
+    {
+      "country": "BELGIUM",
+      "cities": ["Brussels", "Antwerp", "Ghent", "Charleroi", "Liège"]
+    },    
+    {
+      "country": "ITALY",
+      "cities": ["Rome", "Milan", "Naples", "Turin", "Palermo"]
+    },
+    {
+      "country": "GREECE",
+      "cities": ["Athens", "Thessaloniki", "Patras", "Heraklion", "Larissa"]
+    },
+    {
+      "country": "SPAIN",
+      "cities": ["Madrid", "Barcelona", "Valencia", "Seville", "Zaragoza"]
+    },
+    {
+      "country": "PORTUGAL",
+      "cities": ["Lisbon", "Porto", "Braga", "Coimbra", "Funchal"]
     },
     {
       country: 'AUSTRALIA',
