@@ -42,6 +42,7 @@ const WeatherBox = ({weather, icon, setCity, city}) => {
       'Turan': 'https://www.telegraph.co.uk/content/dam/travel/Spark/Hayes-and-Jarvis/HayesJarvis-da-nang-night-getty.jpg?imwidth=680',
       Haiphong: 'https://files.customs.gov.vn/CustomsCMS/ckeditor/images/haiphong1%20(1).jpg',
       'Nha Trang': 'https://kampatour.com/pic/blog/c59c5862-7c67-4a55-a9a8-e43e1df85a77.jpg',
+      Dublin: '/cityImg/dublin.webp',
       Berlin: 'https://hips.hearstapps.com/hmg-prod/images/berlin-skyline-with-fernsehturm-tower-1648214696.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*',
       Munich: 'https://www.hoganlovells.com/-/media/project/our-locations/offices/munich/hlcom_office-mobile-banner-munich.jpg',
       Hamburg: 'https://images.unsplash.com/photo-1569150216991-aba1feb19ac5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
