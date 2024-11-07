@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './WeatherButton.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
@@ -14,8 +14,31 @@ const WeatherButton = ({ cities, setCity }) => {
     setHoveredCity(null);
   };
 
+  const weatherBtnContainerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const midPoint = window.innerHeight / 2;
+      const buttons = weatherBtnContainerRef.current.querySelectorAll('.country-button-container');
+
+      buttons.forEach(button => {
+        const rect = button.getBoundingClientRect();
+        const distanceFromCenter = Math.abs(rect.top + rect.height / 2 - midPoint);
+        const scale = Math.max(0, 180 - distanceFromCenter / 2);
+        button.style.transform = `translateX(${scale}px)`;
+      });
+    };
+
+    const container = weatherBtnContainerRef.current;
+    container.addEventListener('scroll', handleScroll);
+
+    return () => {
+      container.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className='weather-btn-container'>
+    <div ref={weatherBtnContainerRef} className='weather-btn-container'>
       <div className='weather-btn'>
         <button onClick={() => setCity('current')} className='btn'>
         <FontAwesomeIcon icon={faGlobe} />
