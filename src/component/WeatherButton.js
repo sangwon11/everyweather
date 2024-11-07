@@ -20,10 +20,10 @@ const WeatherButton = ({ cities, setCity }) => {
         const rect = button.getBoundingClientRect();
         const distanceFromCenter = Math.abs(rect.top + rect.height / 2 - midPoint);
         const scale = Math.max(0, 150 - distanceFromCenter / 2);
-        const isVeryCenter = distanceFromCenter < 25; // 매우 중앙에 위치한 경우
+        const isVeryCenter = distanceFromCenter < 40; // 매우 중앙에 위치한 경우
         const extraTranslateX = isVeryCenter ? 40 : 0; // 중앙에 있을 때 추가로 30px 오른쪽으로 이동
         const scaleTransform = isVeryCenter ? ' scale(1.5)' : (distanceFromCenter < 25 ? ' scale(1.5)' : ' scale(1.0)');
-        const opacity = 1 - (distanceFromCenter / (window.innerHeight / 2.5));
+        const opacity = 1 - (distanceFromCenter / (window.innerHeight / 2));
 
         button.style.transform = `translateX(${scale + extraTranslateX}px)${scaleTransform}`;
         button.style.opacity = opacity.toFixed(2);
