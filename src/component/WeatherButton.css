@@ -19,7 +19,7 @@
   align-items: flex-start;
   justify-content: space-between;
   width: 300px;
-  height: 200vh;
+  height: auto;
   will-change: transform;
   margin-top: 45vh;
   padding-bottom: 50vh;
@@ -38,6 +38,7 @@
     width: 300px;
     height: auto;
     transition: transform 0.1s ease-out;
+    margin-top: 70px;
 }
 
 .country-btn {
@@ -50,7 +51,7 @@
 .dropdown {
   display: none;
   flex-direction: column;
-  position: static;
+  position: absolute;
   z-index: 1;
 }
 
