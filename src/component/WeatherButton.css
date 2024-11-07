@@ -32,10 +32,11 @@
 .country-button-container {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     width: 300px;
-    height: 50px;
+    height: auto;
     transition: transform 0.1s ease-out;
 }
 
@@ -47,9 +48,14 @@
 }
   
 .dropdown {
-  display: flex;
+  display: none;
   flex-direction: column;
+  position: static;
   z-index: 1;
+}
+
+.active .dropdown {
+  display: flex; /* 활성화 상태에서만 드롭다운 표시 */
 }
   
 .dropdown-item {

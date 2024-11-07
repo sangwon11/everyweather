@@ -4,18 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const WeatherButton = ({ cities, setCity }) => {
-  const [hoveredCity, setHoveredCity] = useState(null);
-
-  const handleMouseEnter = (city) => {
-    setHoveredCity(city);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredCity(null);
-  };
-
   const weatherBtnContainerRef = useRef(null);
+  const [activeCountry, setActiveCountry] = useState(null);
 
+  const toggleDropdown = (country) => {
+    setActiveCountry(activeCountry === country ? null : country); // 토글
+  };
 
   useLayoutEffect(() => {
     const handleScroll = () => {
@@ -55,19 +49,21 @@ const WeatherButton = ({ cities, setCity }) => {
         {cities.map((item, index) => (
           <div 
             key={index}
-            className='country-button-container'
-            onMouseEnter={() => handleMouseEnter(item.country)}
-            onMouseLeave={handleMouseLeave}
+            className={`country-button-container ${activeCountry === item.country ? 'active' : ''}`}
+            onClick={() => toggleDropdown(item.country)}
           >
-            <button onClick={() => setCity(item.country)} className='country-btn btn'>
+            <div className='country-btn btn'>
               {item.country}
-            </button>
-            {hoveredCity === item.country && (
+            </div>
+            {activeCountry === item.country && (
               <div className='dropdown'>
                 {item.cities.map((city, idx) => (
                   <button
                     key={idx}
-                    onClick={() => setCity(city)}
+                    onClick={(e) => {
+                      e.stopPropagation(); // 클릭 이벤트 버블링 방지
+                      setCity(city);
+                    }}
                     className='btn dropdown-item'
                   >
                     {city}
