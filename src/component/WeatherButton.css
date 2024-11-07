@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -28,6 +28,12 @@
     width: 300px;
     height: 50px;
 }
+
+.country-btn {
+  width: 120px;
+  display: flex !important;
+  align-items: center !important;
+}
   
 .dropdown {
   display: flex;
@@ -51,12 +57,6 @@
   background: linear-gradient(45deg, #04f1dd, #057cfb);
   color: transparent !important;
     -webkit-background-clip: text; 
-}
-
-.country-btn {
-  width: 120px;
-  display: flex !important;
-  align-items: center !important;
 }
 
 .btn {
