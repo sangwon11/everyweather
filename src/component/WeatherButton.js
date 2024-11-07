@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import './WeatherButton.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
@@ -17,7 +17,7 @@ const WeatherButton = ({ cities, setCity }) => {
   const weatherBtnContainerRef = useRef(null);
 
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleScroll = () => {
       const midPoint = window.innerHeight / 2;
       const buttons = weatherBtnContainerRef.current.querySelectorAll('.country-button-container');
@@ -38,6 +38,7 @@ const WeatherButton = ({ cities, setCity }) => {
 
     const container = weatherBtnContainerRef.current;
     container.addEventListener('scroll', handleScroll);
+    handleScroll(); 
 
     return () => {
       container.removeEventListener('scroll', handleScroll);
