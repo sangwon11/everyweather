@@ -198,9 +198,7 @@ function App() {
     navigator.geolocation.getCurrentPosition((position) => {
       let lat = position.coords.latitude;
       let lon = position.coords.longitude;
-      setLoading(true)
       getWeatherByCurrentLocation(lat, lon);
-      setLoading(false)
     });
   };
 
