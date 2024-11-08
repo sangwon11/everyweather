@@ -4,6 +4,11 @@
   height: 100vh;
 }
 
+.loading-case {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
 .component-area {
   display: flex;
   justify-content: space-around;
