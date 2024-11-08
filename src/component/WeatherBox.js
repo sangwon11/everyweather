@@ -78,7 +78,7 @@ const WeatherBox = ({weather, icon, setCity, city}) => {
         <div className='weather-info'>
           <div>{icon}</div>
           <h2>{weather?.name}</h2>
-          <h2>{Math.floor(weather?.main.temp)}C / {Math.floor(weather?.main.temp * 1.8 +32)}F </h2>
+          <h2>{Math.floor(weather?.main.temp)}&deg;C / {Math.floor(weather?.main.temp * 1.8 +32)}&deg;F </h2>
           <h3>{weather?.weather[0].description}</h3>
         </div>
         <img className='cityImg' src={img} />

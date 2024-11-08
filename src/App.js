@@ -27,16 +27,16 @@ function App() {
       cities: ['Seoul', 'Busan', 'Incheon', 'Daegu', 'Daejeon', 'Ulsan', 'Gwangju']
     },
     {
-      country: 'USA',
-      cities: ['Washington', 'New York', 'Los Angeles', 'Chicago', 'Las Vegas']
+      country: 'JAPAN',
+      cities: ['Tokyo', 'Osaka', 'Kyoto', 'Yokohama', 'Nagoya']
     },
     {
       country: 'CANADA',
       cities: ['Toronto', 'Vancouver', 'Montreal', 'Ottawa', 'Calgary']
     },
     {
-      country: 'JAPAN',
-      cities: ['Tokyo', 'Osaka', 'Kyoto', 'Yokohama', 'Nagoya']
+      country: 'USA',
+      cities: ['Washington', 'New York', 'Los Angeles', 'Chicago', 'Las Vegas']
     },
     { 
       country: 'THAILAND', 
