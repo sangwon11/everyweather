@@ -1,7 +1,6 @@
 import React, { useState, useLayoutEffect, useRef } from 'react';
 import './WeatherButton.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+
 
 const WeatherButton = ({ cities, setCity }) => {
   const weatherBtnContainerRef = useRef(null);
@@ -42,10 +41,6 @@ const WeatherButton = ({ cities, setCity }) => {
   return (
     <div ref={weatherBtnContainerRef} className='weather-btn-container'>
       <div className='weather-btn'>
-        <button onClick={() => setCity('current')} className='current-btn btn'>
-        <FontAwesomeIcon icon={faGlobe} />
-        </button>
-
         {cities.map((item, index) => (
           <div 
             key={index}
