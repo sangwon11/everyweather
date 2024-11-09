@@ -71,7 +71,7 @@ const WeatherBox = ({weather, icon, setCity, city}) => {
     );
   }
 
-  const precipitation = weather.rain ? weather.rain['1h'] || 0 : 0;
+  const precipitation = weather?.rain ? weather.rain['1h'] || 0 : 0;
 
   return (
     <div className='weather-news'>
