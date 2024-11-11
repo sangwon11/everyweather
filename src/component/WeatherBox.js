@@ -82,11 +82,11 @@ const WeatherBox = ({weather, icon, setCity, city}) => {
           <h2>{weather?.name}</h2>
           <h2>{Math.floor(weather?.main.temp)}&deg;C / {Math.floor(weather?.main.temp * 1.8 +32)}&deg;F </h2>
           <h3>{weather?.weather[0].description}</h3>
-          <div>강수량:{precipitation}mm</div>
-          <div>구름상태:{weather?.clouds.all}%</div>
-          <div>풍속:{weather?.wind.speed}m/s</div>
-          <div>기압:{weather?.main.pressure}hPa</div>
-          <div>습도:{weather?.main.humidity}%</div>
+          <div>강수량: {precipitation}mm</div>
+          <div>구름상태: {weather?.clouds.all}%</div>
+          <div>풍속: {weather?.wind.speed}m/s</div>
+          <div>기압: {weather?.main.pressure}hPa</div>
+          <div>습도: {weather?.main.humidity}%</div>
         </div>
         <img className='cityImg' src={img} />
       </div>
