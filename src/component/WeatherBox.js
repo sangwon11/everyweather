@@ -63,7 +63,7 @@ const WeatherBox = ({weather, icon, setCity, city}) => {
 
   if (!city) {
     return (
-      <div className='weather-news'>
+      <div className='weather-device'>
       <div className='weather-box'>
         <SearchBar setCity={setCity}/>
       </div>
@@ -74,7 +74,7 @@ const WeatherBox = ({weather, icon, setCity, city}) => {
   const precipitation = weather?.rain ? weather.rain['1h'] || 0 : 0;
 
   return (
-    <div className='weather-news'>
+    <div className='weather-device'>
       <div className='weather-box'>
         <SearchBar setCity={setCity}/>
         <div className='weather-info'>
