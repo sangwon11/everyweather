@@ -3,7 +3,6 @@ import SearchBar from './SearchBar';
 import './WeatherBox.css';
 import NewsComponent from './NewsComponent';
 
-
 const WeatherBox = ({weather, icon, setCity, city}) => {
   console.log("weather", weather)
   
